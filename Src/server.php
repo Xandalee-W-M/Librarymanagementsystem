@@ -1,3 +1,3 @@
 <?php
-require once '../config/db.php';
-create tables($conn);
+require_once '../config/db.php';
+create_tables($conn);

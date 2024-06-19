@@ -2,7 +2,7 @@
 //display errors
 ini_set('display errors',1);
 ini_set('display_startup_errors',1);
-error error_reporting(E_ALL);
+error_reporting(E_ALL);
 
 //Database connection details
 $servername ="localhost";
@@ -17,7 +17,8 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error){
     die("Connection failed:". $conn->connect_error);
 }
-function create table($conn){
+function create tables($conn){
+    //SQL to create tables
     $sql ="
     CREATE TABLE IF NOT EXISTS users (
     id INT AUTO-INCREMENT PRIMARY KEY,
@@ -52,7 +53,7 @@ try{
     } else{
         throw new Exception("Error creating tables:".$conn->error);
     }
-}catch (Expection $e){
+}catch (Exception $e){
     echo $e->getMessage();
 } finally {
     $conn->close();
