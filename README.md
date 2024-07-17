@@ -1,3 +1,0 @@
-# Librarymanagementsystem
- 
-Xandalee-W-M
