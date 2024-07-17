@@ -1,7 +1,10 @@
-<?php
-// Include database configuration file
-require_once '../config/db.php';
-
-// Call the function to create tables
-create_tables($conn);
-?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>Welcome to the Library Management System</h1>
+</body>
+</html>

@@ -18,7 +18,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 };
 
-function createTables($conn) {
+function create_tables($conn) {
     // SQL to create tables
     $sql = "
     CREATE TABLE IF NOT EXISTS users (
