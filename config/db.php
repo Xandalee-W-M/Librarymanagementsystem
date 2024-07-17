@@ -63,3 +63,7 @@ function create_tables($conn) {
         $conn->close();
     }
 }
+
+//call the create_tables function
+create_tables($conn);
+?>
