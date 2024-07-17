@@ -64,6 +64,3 @@ function create_tables($conn) {
     }
 }
 
-//call the create_tables function
-create_tables($conn);
-?>
