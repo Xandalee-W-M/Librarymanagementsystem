@@ -8,7 +8,7 @@ error_reporting(E_ALL);
 $servername ="localhost";
 $username ="root";
 $password ="";
-$dbname ="Library management system";
+$dbname ="Library_management_system";
 
 //Create connectiom
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -17,11 +17,11 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error){
     die("Connection failed:". $conn->connect_error);
 }
-function create tables($conn){
+function create_tables($conn){
     //SQL to create tables
     $sql ="
     CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO-INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL); 
