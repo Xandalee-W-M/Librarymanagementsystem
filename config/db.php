@@ -4,19 +4,11 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-<<<<<<< HEAD
 //Database connection details
 $servername ="localhost";
 $username ="root";
 $password ="";
 $dbname ="Library_management_system";
-=======
-// Database connection details
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "library_management_system";
->>>>>>> 6f15d51c4bc1f05dcceb24f952214485c65a3b89
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,7 +17,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-<<<<<<< HEAD
 function create_tables($conn){
     //SQL to create tables
     $sql ="
@@ -34,17 +25,7 @@ function create_tables($conn){
     name VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL); 
-=======
-function create_tables($conn) {
-    // SQL to create tables
-    $sql = "
-    CREATE TABLE IF NOT EXISTS users (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        name VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NOT NULL UNIQUE,
-        password VARCHAR(255) NOT NULL
-    );
->>>>>>> 6f15d51c4bc1f05dcceb24f952214485c65a3b89
+
 
     CREATE TABLE IF NOT EXISTS books (
         id INT AUTO_INCREMENT PRIMARY KEY,
