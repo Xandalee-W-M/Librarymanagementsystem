@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+  //Check if connection is active
+    if(!$conn->connect_error)
     // Prepare SQL statement to select user by email
     $stmt = $conn->prepare("SELECT id, password FROM users WHERE email = ?");
     $stmt->bind_param("s", $email);
@@ -50,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Close statement and database connection
-    $stmt->close();
-    $conn->close();
+$stmt->close();
+$conn->close();
     
 }
 ?>
