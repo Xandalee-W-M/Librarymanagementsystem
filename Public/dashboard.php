@@ -21,6 +21,7 @@ $user_stmt->bind_result($name, $email);
 $user_stmt->fetch();
 $user_stmt->close();
 
+
 // Fetch borrowed books for the authenticated user
 $borrowed_books_stmt = $conn->prepare("SELECT bb.id, b.title, b.author, bb.borrowed_at, bb.due_date, bb.returned_at FROM borrowed_books bb JOIN books b ON bb.book_id = b.id WHERE bb.user_id = ?");
 $borrowed_books_stmt->bind_param("i", $user_id);
