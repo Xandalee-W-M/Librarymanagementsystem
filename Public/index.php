@@ -15,7 +15,7 @@ require_once '../config/db.php';
 <body>
     <div class="container">
         <h1>Welcome to the Library Management System</h1>
-        <img src="images/library.png" alt="Library" class="banner">
+        <img src="images/library(1).png" alt="Library" class="banner">
         <p>
             <!-- Check if user is logged in -->
             <?php if (isset($_SESSION['user_id'])): ?>
