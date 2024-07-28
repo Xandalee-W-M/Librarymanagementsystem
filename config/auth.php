@@ -26,3 +26,12 @@ function redirectIfNotAuthenticated($location) {
         exit();
     }
 }
+
+/**
+ * Returns the authenticated user ID, or null if not authenticated.
+ *
+ * @return int|null
+ */
+function getAuthenticatedUserId() {
+    return isset($_SESSION['user_id'])? $_SESSION['user_id'] : null;
+}
